@@ -1,0 +1,34 @@
+Returning a value of a function
+----------------------------------------------
+What is it?
+- As we know, we can now send a value into a function using a parameter
+- a return statement is going to do the opposite and send a value back to wherever the function was called from
+- A return will always be at the end of the function, basically one line before the "end"
+- A function can only return ONE value, ONLY ONE!!
+- The only way we can have multiple returns is if it is in an If statement, but still only ONE can be returned.
+- The return needs to be stored into a variable wherever the function call came from
+
+What does it look like?
+- When we call the method, we need to create a variable to store the returned value
+	Fro example:
+		
+		program main
+		begin
+		print "What you were you born?"
+		input year
+		age determineAge(year)						(There are two VERY important things happening in this line)
+		print age									(1. We have created a variable called "age". It will store the value of the return)	
+		end											(2. We are calling the function with an argument of year)
+													(The program will always read number 2 FIRST!!!)
+		
+		function determineAge(year)
+		begin
+		age = 2019 - year
+		return age									(The return always needs to be right at the end)
+		end											(The age we are returning gets stored in the variable called age in the main program)
+		
+Things to remember 
+- A function does not have to have a return statement
+- A function can only return ONE VALUE
+- The function will always stop once it has returned a value
+- If you have multiple returns, whichever comes first will return and nothing thereafter.

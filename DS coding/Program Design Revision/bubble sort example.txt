@@ -1,0 +1,28 @@
+h
+	print "Request a section. (sect1, sect2, sect3)"
+	
+	switch sect
+		case of sect = sect1
+			print "Please enter number of students who wrote exam."
+			input numStud
+			for x from 1 to numStud		#Numbers are entered into array
+				print "Please enter next mark"
+				input mark
+				markSet[x] = mark
+			endFor
+			
+			do while flag = 1
+			flag = 0
+			for y from 1 to numStud		# Bubble sort starts here
+				if markSet [y] > markSet[y+1]
+				temp = markSet[y]
+				markSet[y] = markSet[y+1]
+				markSet[y+1] = temp
+				flag = 1
+				end if
+			endFor
+			
+			for z from 1 to numStud 		#Marks are printed
+				print markSet[z]
+			endFor
+				

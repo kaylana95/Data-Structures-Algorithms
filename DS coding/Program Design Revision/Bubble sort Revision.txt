@@ -1,0 +1,34 @@
+Revision for the Bubble sort
+-------------------------------------
+What is the bubble sort?
+- THe bubble sort is an algorithm that will sort an array from the smallest element to the biggest Element.
+- It works by comparing one element to another. If the element is bigger than the other, it gets shifted to the end of the array.
+- The index of the array cannot move, therefore the element is swapped between indexes.
+- Basically, they take the element in index 1 and compare it with the element in index 2.
+- We will swap until we are one less than the number of indexes in the array. For example, if we have 10 indexes in the array, we will swap 9 times.
+
+for x from 1 to 5						(we loop five time because we want an array)
+input mark
+marks[x] = mark							(we insert the input value "mark" into an array)
+endFor
+
+do while flag = 1						(we will attempt to swap the first two indexes whilst the flag = 1)
+flag = 0								(if there is nothing to swap, set the flag to equal 0)
+
+from y from 1 to 4						(we loop one less than the number of indexes in the array.)
+if marks[y] > marks[x + 1]				(we compare one position [x] with another position [x+1])
+temp = marks[x]							(we take the biggest number (marks[x]) and store it in a variable called temp)
+marks[x] = marks[x + 1]					(we then store the smaller number (marks[x+1]) into the empty marks[x])
+mark[x + 1] = temp						(we then insert the value of temp (the bigger number) and we insert it into marks[x+1])
+flag 1									(swap occurred so we repeat the whole process again)
+endIf
+endFor
+endDoWhile
+
+for z from 1 to 5
+print marks[y]
+endFor
+
+Things to remember:
+- This code will always sort the array.
+- The only thing you need 

@@ -1,0 +1,98 @@
+Finding the lowest / highest / average element in an Array and two-dimensional Array
+--------------------------------------------------------------
+What is it?
+- Due to an array storing lots of values, we can use it to find the highest, lowest or average element.
+- The biggest element is obviously the largest number inside an array.
+- The smallest element is the value is the smallest
+- the average is when we calculate the total of the array, in other words, add each element up. With that total, we divide by the number of indexes.
+------------------------------------------------------------------
+Find the average:
+
+totalMark = 0					(Whenever we calculate the total INSIDE a LOOP, we need to set the variable to ZERO)
+for x from 1 to 5
+input mark							(The user inputs their mark into a variable called mark)
+marks[x] = mark						(We insert it into the array)
+totalMark = totalMark + marks [x]	(For every iteration of the loop, the element will be added to totalMark)
+endFor
+average = totalMark / 5				(We calculate the average OUTSIDE of the for loop in order to allow the loop to calculate everything)
+print "The average is ",average,
+end
+
+Things to remember:
+- If we do not know how many times to run the loop, we must ask the user.
+- for examples: "Please enter how many students are in the class."
+- The user will input the value into a variable, We then use that variable in the for loop
+- input student
+- for x from 1 to student
+---------------------------------------------------------------------
+Finding the largest element:
+
+hiMark = 0							(we create a variable to check if the element in index 1 id bigger than ZERO)
+for x from 1 to 5					(We loop for all 5 inputs)
+input mark							(We input a mark from the user)
+marks[x] = mark						(When the user inputs a value into the variable, we insert it into the array)
+if marks[x] > hiMark				(This is the line we ALWAYS use for finding the BIGGEST element. We are computing the element to the value stored in hiMark)
+hiMark = marks[x]					(If the element is bigger than hiMark, we replace hiMark with that element.)
+endIf								()
+endFor								()
+print "The biggest value in the array is ",hiMark,
+end
+
+Things to remember:
+- To find the highest mark, we ALWAYS make the value of hiMark equal to ZERO
+- The logic behind finding the biggest element is, if the element is index 1 is bigger than the variable you created,
+  replace the value with that element. Then compare the next element to the variable. After you repeat this process, we will have the biggest element.
+----------------------------------------------------------------------  
+Finding the lowest element:
+
+lowMark = 99999						(we make a variable with a very large value)
+for x from 1 to 5					(We loop for all 5 inputs)
+input mark							(We input a mark from the user)
+marks[x] = mark						(When the user inputs a value into the variable, we insert it into the array)
+if marks[x] < lowMark				(This is the line we ALWAYS use for finding the SMALLEST element. We are computing the element to the value stored in lowMark)
+lowMark = marks[x]					(If the element is smaller than hiMark, we replace lowMark with that element.)
+endIf
+endFor
+print "The lowest value in the array is ",lowMark,
+end
+
+Things to remember:
+- To find the highest mark, we ALWAYS make the value of hiMark equal to a VERY BIG NUMBER
+- The logic behind finding the smaller element is, if the element is index 1 is smaller than the variable you created,
+  replace the value with that element. Then compare the next element to the variable. After you repeat this process, we will have the smallest element.
+-------------------------------------------------------------------------
+Combined example:
+hiMark = 0
+lowMark = 9999999
+totalMark = 0
+
+for x from 1 to 5
+input mark
+marks[x] = mark
+marks[x] = mark						
+if marks[x] > hiMark				
+hiMark = marks[x]					
+endIf
+
+if marks[x] < lowMark				
+lowMark = marks[x]					
+endIf
+
+totalMark = totalMark + marks [x]
+endFor
+average = totalMark / 5
+
+print "The average is ",average,
+print "The biggest value in the array is ",hiMark,
+print "The lowest value in the array is ",lowMark,
+-----------------------------------------------------------------------
+Two-Dimensional Array
+
+What is it?
+- A two-dimensional array is identical to a one-dimensional array except, that it uses two index values to locate its element.
+- The best way to see how it works is using another table:
+	index		1		2		3	
+	index2 |1  "Bob"  "John"  "Sam"
+		   |2  "Dad"  "Mom"  "Ben"
+		   |3  "Jon"  "Fred"  "Gary"
+- We insert and print from the array the same way but instead of one loop, we use two For loops.

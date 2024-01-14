@@ -1,0 +1,52 @@
+What must I do:
+- Read records from file called student.fle
+- File has records that contain three fields namely : student name, student number, fees paid (y/n)
+- If students have paid fees, record must be written into file called paid.fle (number of records written into this file must be counted and printed)
+- If not paid, record must be written into a file called arrears.fle (this must be printed)
+
+#record
+#	studRec = studName, studNumber, feesPaid
+#endRecord
+#record
+#	paid = name, number
+#endRecord
+#record
+#	arrears = studentName, studentNumber
+#endRecord
+
+
+begin																						#program begins
+	open student.fle for input																#the file called student.fle is opened for input, because it will be read
+	open paid.fle for output																#the file called paid.fle is opened for output, because it will be written to
+	open arrears.fle for output																#the file called arrears.fle is opened for output, because it will be written to
+	
+	totPaid = 0																				#totPaid is set to equal 0, because it's going to be used to count the number of students who paid
+	totArrears = 0																			#totArrears is set to 0, because it's going to be used to count the total number of students in arrears
+	
+	read studRec from student.fle															#the records are read from the file called student.fle
+	
+	while not EOF student.fle																#a while loop starts and runs until the end of the student.fle file by using "EOF"
+		if studRec.feesPaid = y																#this tells the computer that if the fees have been paid, then it should follow this if statement
+			write studRec.studName, studRec.studNumber to paid.fle							#if the condition that was set is true, then this should be done (write records from student.fle to paid.fle)
+			totPaid = totPaid + 1															#1 is added to totPaid to count the number of student who have paid their fees
+		else if studRec.feesPaid = n														#tells the computer that, if the previous condition was false then it should check to see if this condition is true
+			write studRec.studName, studRec.studNumber to arrears.fle						#if the condition above was true, then records from the file called student.fle to the file arrears.fle
+			totArrears = totArrears + 1														#1 is added to totArrears, to count the total number of students in arrears
+		endIf																				#if statement is closed
+		read studRec from student.fle														#tells computer to read the file student.fle to repeat the while loop again if not end of the file
+	endWhile																				#while loop is ended
+	close student.fle																		#file student.fle is closed
+	close paid.fle																			#file paid.fle is closed
+	close arrears.fle																		#file arrears.fle is closed
+	print "Number of students who paid is ",totPaid,										#the total number of students have been printed with a short message
+	
+	open arrears.fle for input																#file arrears.fle is opened for input, because it's going to be read
+	
+	read arrears from arrears.fle															#computer is told to read record from the file arrears.fle
+	
+	while not EOF arrears.fle																#while loop starts and continues until the end of the file, using EOF
+		print "Students in arrears ",arrears.studentName,arrears.studentNumber				#Names and student number of the students in the file arrears.fle are printed
+		read arrears from arrears.fle														#computer is told to read the file called arrears.fle again to see if there's more data to be read to repeat the while loop until the end of the file
+	endWhile																				#while loop is ended here
+	close arrears.fle																		#file arrears.fle is closed
+end																							#program ends

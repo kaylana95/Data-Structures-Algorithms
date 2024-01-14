@@ -1,0 +1,39 @@
+Revision notes for inserting into Array
+-----------------------------------------------
+What is an Array?
+- An array is a data structure that consists of data items that are called Elements.
+- Each piece of data is sorted in a block. Each piece of data has to be the same data type as all the other blocks.
+- Each block has a number that represents its position in the array.
+- The first bock in the array is known as position 1. We call the position of the blocks, the "Index".
+- 1  2  3  4  5
+- [] [] [] [] []
+- Each block has an Index, as seen above (numbers 1-5)
+- Within each block, the value is an Element.
+- An array must have a name.
+- For example: marks[5] = 30 (this means there is an array called marks, with an index of 5, has an element of 30)
+- The best way to see how an array is using a table:
+	Index | Element
+	  1   | "Bob"
+	  2   | "John"
+	  3   | "Sam"
+
+Inserting / Printing to / from an Array.
+------------------------------------------------
+- In order to insert or print the element into / from an array, we NEED a For Loop.
+- The role of the For Loop is to insert / print to / from each index in the array.
+
+- For example:
+for x from 1 to 10			(The loop is repeating 10 times)
+print mark[x]				(For every iteration of the loop, the value of 'x' changes)
+endFor						(Therefore, we can print each element from each index because the For loop repeats itself for every index)
+
+- For example:
+for x from 1 to 10			(The loop is repeating 10 times)
+input value					(We input one value and insert it into the array)
+mark[x] = value				(For every iteration of the loop 'x' changes)
+endFor						(Therefore, each iteration of the loop we can add the value of the input variable into the specific index of the array)
+
+When do I use it?
+- When the question asks to make use of an array (or one-dimensional array)
+- "Add the following into an array."
+- "Print all the records / elements / values."

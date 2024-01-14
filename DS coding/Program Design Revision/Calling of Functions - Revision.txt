@@ -1,0 +1,35 @@
+Revision for calling a function
+---------------------------------------
+What is it?
+- Calling a function is when we go to the function, knock on its door in order to get it to start
+- Because the function is a separate section, it has its own begin and end.
+- We need to start the section up.
+- We call the function by typing the name of the function.
+- Wherever we are in the program (either the main program or another function) we can call a function.
+- If the function has a parameter, we need to call the function name and include the function name and include the value of that parameter
+- The value we send to the parameter is called an argument
+- The program will always divert to the function when we call the function
+- Once the function is done, we will return to where the function call was
+
+What does it look like?
+	program main
+	begin
+	function name(argument)			(This is how we call a function)
+	end
+	
+Example:
+	program main
+	begin
+	name("Bob")						(We are calling a function by calling its name and sending the argument into the parameter)
+	end
+	
+	function name(name)
+	begin
+	print name						(We sent the argument "Bob" through the chimney down into the parameter)
+	end
+	
+Things to remember:
+- If the function has multiple parameters, we need to have multiple arguments
+- The argument need to be in the same order as the parameters
+- If your function has a parameter, you need an argument
+- The way the program works is that it jumps to the function when the function is called

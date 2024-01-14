@@ -1,0 +1,29 @@
+Revision for the program
+-----------------------------------------
+What is it?
+- When we have function in our program, it is seen as a separated program.
+- We will split the program into two parts: the main section of the program, and the functions
+- The function section is where we will create all our functions
+- The main section is where we will type our normal code
+- Both main program and function will need its own "begin" and "end"
+
+What does it look like?
+	- We start the section with the word "program" followed by the programs name
+	
+	program main				(The program section. The program is called main)
+	begin
+	print "Hello everyone"
+	end
+	
+	function printAgain()		(The function section)
+	begin
+	print "Hello again"
+	end
+	
+Things to Remember:
+- Look at the question. It will always tell you what to do in each section.
+- It will say "In the function", or "create a function"
+- It will say "In the program", or "create a program"
+- We will call the function from the main program
+- We will pass (send) the parameter from the main program 
+- We will receive returned values into the main program.
